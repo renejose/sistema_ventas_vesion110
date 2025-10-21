@@ -1,5 +1,8 @@
 class Producto:
     def __init__(self, codigo, nombre, precio, stock):
+        if precio < 0:
+            raise ValueError(f"El precio no puede ser negativo. Precio recibido: {precio}")
+        
         self.codigo = codigo
         self.nombre = nombre
         self.precio = precio
