@@ -1,4 +1,6 @@
 from detalle_pedido import DetallePedido
+
+from detalle_pedido import DetallePedido
 class Pedido:
     contador = 1  # contador estático de pedidos
 

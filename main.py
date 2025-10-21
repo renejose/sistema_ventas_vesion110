@@ -1,6 +1,3 @@
-from cliente import Cliente
-from producto import Producto
-from pedido import Pedido
 def main():
     # Crear clientes
     cliente1 = Cliente("12345678", "Juan Pérez", "Av. Principal 123")
