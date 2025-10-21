@@ -2,6 +2,14 @@ from cliente import Cliente
 from producto import Producto
 from pedido import Pedido
 
+def mostrar_catalogo(lista_productos):
+    print("\n📋 Catálogo de productos:")
+    print("-" * 60)
+    for p in lista_productos:
+        print(p.mostrar_info())
+    print("-" * 60)
+    
+
 def main():
     # Crear clientes
     cliente1 = Cliente("12345678", "Juan Pérez", "Av. Principal 123")
@@ -13,9 +21,12 @@ def main():
     prod3 = Producto("P003", "Teclado", 120, 15)
 
     # Mostrar catálogo
+    '''
     print("📋 Catálogo de productos:")
     for p in [prod1, prod2, prod3]:
         print(p.mostrar_info())
+    '''
+    mostrar_catalogo([prod1, prod2, prod3])
 
     # Crear pedidos
     pedido1 = Pedido(cliente1)
