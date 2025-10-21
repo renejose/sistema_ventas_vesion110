@@ -13,3 +13,5 @@ class Producto:
 
     def mostrar_info(self):
         return f"[Producto] {self.nombre} (Código: {self.codigo}), Precio: {self.precio}, Stock: {self.stock}"
+    
+    #Validar que el stock no sea negativo
