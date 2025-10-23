@@ -1,12 +1,39 @@
+<<<<<<< HEAD
 
 from cliente import Cliente
 from producto import Producto
 from pedido import Pedido
+=======
+from cliente import Cliente
+from producto import Producto
+from pedido import Pedido
+
+clientes = []
+
+def buscar_cliente(cliente_nombre: str) -> Cliente:
+    found = None
+    
+    print(f"Buscando cliente [{cliente_nombre}]")
+    for client in clientes:
+        if client.nombre.strip().lower() == cliente_nombre.strip().lower():
+            print(f"\tSe encontro cliente [{cliente_nombre}]")
+            found = client
+            break
+    print()
+    
+    return found
+
+>>>>>>> f2fca99833b0057a20b441f47dd9d53c29452342
 def main():
     # Crear clientes
     cliente1 = Cliente("12345678", "Juan Pérez", "Av. Principal 123")
     cliente2 = Cliente("87654321", "María López", "Calle Secundaria 45")
-
+    clientes.extend([cliente1, cliente2])
+    
+    # Buscar cliente
+    buscar_cliente("María López")
+    buscar_cliente("Luis López")
+    
     # Crear productos
     prod1 = Producto("P001", "Laptop", 3500, 5)
     prod2 = Producto("P002", "Mouse", 50, 20)
