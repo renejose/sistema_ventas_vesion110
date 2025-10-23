@@ -1,5 +1,6 @@
 class Cliente:
     def __init__(self, dni, nombre, direccion):
+        
         self.dni = dni
         self.nombre = nombre
         self.direccion = direccion
